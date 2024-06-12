@@ -1,0 +1,131 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Gradient Flexible Animated Text</title>
+
+    <link rel="canonical" href="https://codepen.io/slyka85/pen/zwMOGX">
+  
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css?family=Barrio');
+
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.gradient-text {
+    transition: all 1s ease;
+    color: #FF1361;
+    background-color: #FF1361;
+    background: -o-linear-gradient(left, #FFF800 10% , #FF1361, #44107A, #7794ff);
+    background: -webkit-linear-gradient(left, #FFF800 10% , #FF1361, #44107A, #7794ff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text.text1 {
+  -webkit-animation: dancingColors 2s infinite forwards ease-in-out;
+          animation: dancingColors 2s infinite forwards ease-in-out;
+  margin-bottom: 5%;
+}
+.gradient-text.text2 {
+  -webkit-animation: dancingColors 2s -0.5s infinite forwards ease-in-out;
+          animation: dancingColors 2s -0.5s infinite forwards ease-in-out;
+}
+
+@media screen and (min-width:0\0) {
+    /* IE9 and IE10 hack */
+    .gradient-text {
+        background: transparent;
+    }
+}
+
+@-moz-document url-prefix() {
+  /* Firefox hack */
+.gradient-text {
+    background-color: transparent;
+    }
+}
+
+body {
+  background: black;
+  text-align: center;
+}
+.gradient-text.text1 {
+  font-size: 40px;
+  font-size: calc(20px + (40 - 20) * (100vw - 400px) / (1000 - 400));
+  font-family: 'Barrio', cursive;
+}
+.gradient-text.text2 {
+  font-size: 30px;
+  font-size: calc(20px + (30 - 20) * (100vw - 400px) / (1000 - 400));
+  font-family: 'Barrio', cursive;
+}
+
+
+@-webkit-keyframes dancingColors {
+  50% {
+   //  background: -webkit-linear-gradient(left, #FF1361, #44107A, #7794ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: -860px;
+  }
+}
+
+
+
+@keyframes dancingColors {
+  50% {
+   //  background: -webkit-linear-gradient(left, #FF1361, #44107A, #7794ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: -860px;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div class="container">
+<div class="gradient-text text1">I am a gradient text in modern browsers.</div>
+<div class="gradient-text text2">I am a pink text in very old browsers.</div>
+</div>
+  
+  
+  
+
+
+
+</body></html>
